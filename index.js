@@ -3,9 +3,16 @@ const text = document.querySelector("#text");
 console.log(button);
 
 const DOMSelectors = {
-  button: document.getElementById("btn"),
+  submit: document.querySelector("#form"),
   text: document.querySelector("#text"),
-  empty: document.querySelect(".nothing"),
-  point: document.querySelectorAll(".point"),
+  box: document.getElementById("big-black-box"),
+  points: document.querySelectorAll(".point"),
 };
-console.log(DOMSelectors);
+
+function backgroundAndText(background, text) {
+  background.style.backgroundColor = "red";
+  text.innerHTML = "this is cool";
+  text.style.fontSize = "40px";
+}
+
+backgroundAndText(DOMSelectors.box, DOMSelectors.text);
