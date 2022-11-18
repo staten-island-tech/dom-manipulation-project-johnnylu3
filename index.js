@@ -11,11 +11,26 @@ const DOMSelectors = {
 
 DOMSelectors.submit.addEventListener("submit", function (e) {
   e.preventDefault();
-  const input = DOMSelectors.input1.value;
-  const input2 = DOMSelectors.input2.value;
-  const input3 = DOMSelectors.input3.value; // .value lets you get the values of an element, in this case something you typed in
-  return { input, input2, input3 };
 });
+
+DOMSelectors.submit.addEventListener("submit", function getNames() {function jug() {let input = DOMSelectors.input1.value,
+    input2 = DOMSelectors.input2.value,
+    input3 = DOMSelectors.input3.value;
+
+  return {
+    input: input,
+    input2: input2,
+    input3: input3,} 
+  });
+
+// DOMSelectors.input.value = "";
+// DOMSelectors.button.addEventListener("click", function () {
+//   let input = DOMSelectors.input.value;
+//   DOMSelectors.box.insertAdjacentHTML("afterend", <p>${input}</p>);
+//   DOMSelectors.input.value = "";
+// });
+
+// console.log(getNames);
 
 // const { input1, input2, input3 } = getValues();
 // console.log(getValues);
@@ -26,18 +41,6 @@ DOMSelectors.submit.addEventListener("submit", function (e) {
 //         <p class = 'extra-text'>${input}</p>
 //     `
 // );
-
-function getNames() {
-  // get names from the database or API
-  let firstName = "John",
-    lastName = "Doe";
-
-  // return values
-  return {
-    firstName: firstName,
-    lastName: lastName,
-  };
-}
 
 // -Create a function that creates an object and calls the following functions
 //-Create a function that injects the newly created object into the DOM
