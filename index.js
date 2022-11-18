@@ -11,10 +11,23 @@ const DOMSelectors = {
 
 DOMSelectors.submit.addEventListener("submit", function (e) {
   e.preventDefault();
-  const input = DOMSelectors.input1.value;
-  const input2 = DOMSelectors.input2.value;
-  const input3 = DOMSelectors.input3.value; // .value lets you get the values of an element, in this case something you typed in
-  return { input, input2, input3 };
+  let input1 = DOMSelectors.input1.value;
+  let input2 = DOMSelectors.input2.value;
+  let input3 = DOMSelectors.input3.value;
+
+  let values = { input1, input2, input3 };
+
+  console.log(values);
+
+  DOMSelectors.box.insertAdjacentHTML(
+    "afterend",
+    `
+          <p class = 'extra-text'>${values.input1}, ${values.input2}, ${values.input3}</p>
+      `
+  );
+  DOMSelectors.input1.value = "";
+  DOMSelectors.input2.value = "";
+  DOMSelectors.input3.value = "";
 });
 
 // const { input1, input2, input3 } = getValues();
@@ -26,18 +39,6 @@ DOMSelectors.submit.addEventListener("submit", function (e) {
 //         <p class = 'extra-text'>${input}</p>
 //     `
 // );
-
-function getNames() {
-  // get names from the database or API
-  let firstName = "John",
-    lastName = "Doe";
-
-  // return values
-  return {
-    firstName: firstName,
-    lastName: lastName,
-  };
-}
 
 // -Create a function that creates an object and calls the following functions
 //-Create a function that injects the newly created object into the DOM
