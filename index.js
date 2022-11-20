@@ -11,17 +11,28 @@ const DOMSelectors = {
 
 DOMSelectors.submit.addEventListener("submit", function (e) {
   e.preventDefault();
-});
-
-DOMSelectors.submit.addEventListener("submit", function getNames() {function jug() {let input = DOMSelectors.input1.value,
+  let input1 = DOMSelectors.input1.value,
     input2 = DOMSelectors.input2.value,
     input3 = DOMSelectors.input3.value;
+  let values = { input1, input2, input3 };
 
-  return {
-    input: input,
-    input2: input2,
-    input3: input3,} 
-  });
+  console.log(values);
+
+  DOMSelectors.box.insertAdjacentHTML(
+    "afterend",
+    `<div class="display-card">
+    <img class="display-img" src="${input3}"/>
+    <h2 class="display-artist">${input2}</h2>
+    <h3 class="display-album">${input1}</h3>
+    <button class="remove btn">Remove Album</button>
+  </div>
+  `
+  );
+
+  DOMSelectors.input1.value = "";
+  DOMSelectors.input2.value = "";
+  DOMSelectors.input3.value = "";
+});
 
 // DOMSelectors.input.value = "";
 // DOMSelectors.button.addEventListener("click", function () {
