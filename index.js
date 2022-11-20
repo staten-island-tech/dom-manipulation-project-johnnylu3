@@ -33,27 +33,3 @@ DOMSelectors.submit.addEventListener("submit", function (e) {
   DOMSelectors.input2.value = "";
   DOMSelectors.input3.value = "";
 });
-
-// DOMSelectors.input.value = "";
-// DOMSelectors.button.addEventListener("click", function () {
-//   let input = DOMSelectors.input.value;
-//   DOMSelectors.box.insertAdjacentHTML("afterend", <p>${input}</p>);
-//   DOMSelectors.input.value = "";
-// });
-
-// console.log(getNames);
-
-// const { input1, input2, input3 } = getValues();
-// console.log(getValues);
-
-// DOMSelectors.box.insertAdjacentHTML(
-//   "afterend",
-//   `
-//         <p class = 'extra-text'>${input}</p>
-//     `
-// );
-
-// -Create a function that creates an object and calls the following functions
-//-Create a function that injects the newly created object into the DOM
-//-Create a function that clears the input fields after injecting the object
-//-Create a function to remove an object after they have been created
