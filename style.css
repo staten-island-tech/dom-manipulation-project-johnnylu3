@@ -58,7 +58,7 @@ h5 {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
-.text-box {
+.text-box1, .text-box2, .text-box3 {
   width: 22rem;
   height: 2.5rem;
   font-size: 2rem;
