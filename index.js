@@ -33,11 +33,17 @@ DOMSelectors.submit.addEventListener("submit", function (e) {
   DOMSelectors.input2.value = "";
   DOMSelectors.input3.value = "";
 
-  let DOMSelector = { button2: document.getElementById("#he") };
+  let displaycard = document.querySelector("div.display-card"),
+    removeBtn = displaycard.querySelector("button.remove");
 
-  DOMSelector.button2.addEventListener("click", function () {
-    values.remove();
+  removeBtn.addEventListener("click", function () {
+    displaycard.remove();
+
+    const r = document.querySelector(".display-img"),
+      p = document.querySelector(),
+      p = document.querySelector();
+
+    // remove the last list item
+    r.parentElement.removeChild(e);
   });
 });
-var overlay = document.querySelector("div.overlay"),
-  closeBttn = overlay.querySelector("button.overlay-close");
