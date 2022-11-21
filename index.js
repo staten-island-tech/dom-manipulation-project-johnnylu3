@@ -2,6 +2,7 @@ const DOMSelectors = {
   submit: document.querySelector("#form"),
   text: document.querySelector("#text"),
   box: document.querySelector(".form-parent"),
+  box2: document.querySelector(".display"),
   points: document.querySelectorAll(".point"), //node list
   button: document.querySelector(".btn"),
   input1: document.querySelector(".text-box1"),
@@ -18,18 +19,25 @@ DOMSelectors.submit.addEventListener("submit", function (e) {
 
   console.log(values);
 
-  DOMSelectors.box.insertAdjacentHTML(
-    "afterend",
+  DOMSelectors.box2.insertAdjacentHTML(
+    "afterBegin",
     `<div class="display-card">
     <img class="display-img" src="${input3}"/>
     <h2 class="display-artist">${input2}</h2>
     <h3 class="display-album">${input1}</h3>
-    <button class="remove btn">Remove Album</button>
+    <button class="remove btn" id="he">Remove Album</button>
   </div>
   `
   );
-
   DOMSelectors.input1.value = "";
   DOMSelectors.input2.value = "";
   DOMSelectors.input3.value = "";
+
+  let DOMSelector = { button2: document.getElementById("#he") };
+
+  DOMSelector.button2.addEventListener("click", function () {
+    values.remove();
+  });
 });
+var overlay = document.querySelector("div.overlay"),
+  closeBttn = overlay.querySelector("button.overlay-close");
