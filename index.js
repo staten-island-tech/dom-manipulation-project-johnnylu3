@@ -38,12 +38,5 @@ DOMSelectors.submit.addEventListener("submit", function (e) {
 
   removeBtn.addEventListener("click", function () {
     displaycard.remove();
-
-    const r = document.querySelector(".display-img"),
-      p = document.querySelector(),
-      p = document.querySelector();
-
-    // remove the last list item
-    r.parentElement.removeChild(e);
   });
 });
