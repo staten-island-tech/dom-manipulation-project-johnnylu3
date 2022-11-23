@@ -25,7 +25,7 @@ DOMSelectors.submit.addEventListener("submit", function (e) {
     <img class="display-img" src="${input3}"/>
     <h2 class="display-artist">${input2}</h2>
     <h3 class="display-album">${input1}</h3>
-    <button class="remove btn" id="he">Remove Album</button>
+    <button class="remove btn">Remove Album</button>
   </div>
   `
   );
