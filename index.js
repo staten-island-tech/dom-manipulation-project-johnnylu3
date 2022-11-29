@@ -22,9 +22,9 @@ DOMSelectors.submit.addEventListener("submit", function (e) {
   DOMSelectors.box2.insertAdjacentHTML(
     "afterBegin",
     `<div class="display-card">
-    <img class="display-img" src="${input3}"/>
-    <h2 class="display-artist">${input2}</h2>
-    <h3 class="display-album">${input1}</h3>
+    <img class="display-img" src="${values.input3}"/>
+    <h2 class="display-artist">${values.input2}</h2>
+    <h3 class="display-album">${values.input1}</h3>
     <button class="remove btn">Remove Album</button>
   </div>
   `
