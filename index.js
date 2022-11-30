@@ -10,29 +10,31 @@ const DOMSelectors = {
   input3: document.querySelector(".text-box3"),
 };
 
+let input1 = DOMSelectors.input1.value,
+input2 = DOMSelectors.input2.value,
+input3 = DOMSelectors.input3.value;
+let values = { input1, input2, input3 };
+
+function insertCard (input1,input2, input3) { DOMSelectors.box2.insertAdjacentHTML(
+  "afterBegin",
+  `<div class="display-card">
+  <img class="display-img" src="${input3}"/>
+  <h2 class="display-artist">${input2}</h2>
+  <h3 class="display-album">${input1}</h3>
+  <button class="remove btn">Remove Album</button>
+</div>
+`
+);}
+
 DOMSelectors.submit.addEventListener("submit", function (e) {
   e.preventDefault();
-  let input1 = DOMSelectors.input1.value,
-    input2 = DOMSelectors.input2.value,
-    input3 = DOMSelectors.input3.value;
-  let values = { input1, input2, input3 };
-
-  console.log(values);
-
-  DOMSelectors.box2.insertAdjacentHTML(
-    "afterBegin",
-    `<div class="display-card">
-    <img class="display-img" src="${values.input3}"/>
-    <h2 class="display-artist">${values.input2}</h2>
-    <h3 class="display-album">${values.input1}</h3>
-    <button class="remove btn">Remove Album</button>
-  </div>
-  `
-  );
+insertCard();
   DOMSelectors.input1.value = "";
   DOMSelectors.input2.value = "";
   DOMSelectors.input3.value = "";
-
+  querySelectorAll buttons
+removebutton.foreach 
+add event listner .target.parent Element.remove
   let displaycard = document.querySelector("div.display-card"),
     removeBtn = displaycard.querySelector("button.remove");
 
@@ -40,3 +42,5 @@ DOMSelectors.submit.addEventListener("submit", function (e) {
     displaycard.remove();
   });
 });
+
+
