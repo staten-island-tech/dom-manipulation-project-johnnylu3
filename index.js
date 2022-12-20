@@ -26,10 +26,10 @@ function card(input1, input2, input3) {
   DOMSelectors.box2.insertAdjacentHTML(
     "afterBegin",
     `<div class="display-card">
-  <img class="display-img" src="${input3}"/>
-  <h2 class="display-artist">${input2}</h2>
-  <h3 class="display-album">${input1}</h3>
-  <button class="remove btn">Remove Album</button>
+  <img class="display-food" src="${input3}"/>
+  <h2 class="display-origin">${input2}</h2>
+  <h3 class="display-name">${input1}</h3>
+  <button class="remove btn">Remove Card</button>
 </div>
 `
   );
